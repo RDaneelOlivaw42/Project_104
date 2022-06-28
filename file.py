@@ -93,14 +93,14 @@ def mode(data):
     #finding modal range and occurence
     mode_range, mode_occurence = 0, 0
 
-    for range in ranges:
+    for range,occurence in ranges.items():
         if occurence > mode_occurence:
-            mode_occurence = occurence
-            num = str(range).split(" ")
-            mode_range = [int(num[0]), int(num[2])]
+             mode_occurence = occurence
+             num = str(range).split(" ")
+             mode_range = [int(num[0]), int(num[2])]
     
     mode = float((mode_range[0] + mode_range[1])/2)
-    print("Mode is", str(mode), "pounds")
+    print("Mode is", mode, "pounds")
         
 
 arithmetic_mean(data)
